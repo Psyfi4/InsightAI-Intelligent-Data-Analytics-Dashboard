@@ -1,1 +1,7 @@
-
+Month,Region,Sales,Profit
+Jan,North,10000,2000
+Feb,North,12000,2500
+Mar,North,8000,1500
+Jan,South,9000,1800
+Feb,South,9500,2000
+Mar,South,11000,2200
