@@ -1,32 +1,16 @@
-# AI-Powered Data Analytics Dashboard
+# InsightAI – Intelligent Data Analytics Dashboard
 
-## Overview
-This project combines Data Visualization + LLM-based AI insights + Cloud-ready deployment.
+## 🚀 Overview
+InsightAI is an AI-powered analytics platform that transforms raw datasets into
+interactive visual dashboards and automatically generated insights using
+Large Language Models (LLMs).
 
-Users can:
-- Upload datasets
-- Visualize sales trends
-- Generate AI-based explanations
+This project demonstrates the integration of:
 
-## Tech Stack
-- Streamlit
-- Pandas
-- Plotly
-- Transformers (LLM)
-- Python
-
-## Features
-- Interactive Dashboard
-- AI-generated business insights
-- CSV upload
-- Modular architecture
-- Cloud deployment ready
-
-## Run Locally
-
-pip install -r requirements.txt
-streamlit run app.py
-
+- 📊 Data Visualization
+- 🤖 AI-generated Insights
+- ☁ Virtualization & Multi-Cloud Deployment Concepts
+- 🐳 Containerization-ready Architecture
 ## Future Improvements
 - Deploy on AWS EC2
 - Add Docker support
