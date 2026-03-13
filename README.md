@@ -13,6 +13,7 @@ This project demonstrates the integration of:
 - 🐳 Containerization-ready Architecture
 ## Future Improvements
 - Deploy on AWS EC2
-- Add Docker support
+- Add Docker configuration to enable easy containerized deployment.
 - Replace local LLM with HuggingFace API
 - Add Natural Language Query system
+- Advanced Analytics
