@@ -1,0 +1,41 @@
+version: "3.9"
+
+# ── AI Analytics Dashboard — Docker Compose ────────────────────────────────────
+# Starts the FastAPI backend and React frontend in isolated containers.
+#
+# Usage:
+#   docker-compose up --build        # first run (builds images)
+#   docker-compose up                # subsequent runs
+#   docker-compose down              # stop and remove containers
+#
+# Then open: http://localhost:5173
+
+services:
+
+  # ── FastAPI backend ──────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: analytics-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}   # pass from host .env if set
+    volumes:
+      - ./backend:/app                        # hot-reload during development
+    restart: unless-stopped
+
+  # ── React / Vite frontend ────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: analytics-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    restart: unless-stopped

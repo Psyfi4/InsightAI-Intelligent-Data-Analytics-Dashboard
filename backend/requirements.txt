@@ -1,0 +1,16 @@
+# ── Core API framework ─────────────────────────────────────────────────────────
+fastapi
+uvicorn[standard]
+
+# ── Data processing (no version pins = pip picks a wheel that exists for your Python) ──
+pandas
+numpy
+
+# ── Environment variables ──────────────────────────────────────────────────────
+python-dotenv
+
+# ── AI (optional — only needed if you set OPENAI_API_KEY) ─────────────────────
+openai
+
+# ── CORS / form handling ───────────────────────────────────────────────────────
+python-multipart
